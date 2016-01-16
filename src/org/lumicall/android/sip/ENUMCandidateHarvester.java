@@ -1,11 +1,11 @@
 package org.lumicall.android.sip;
 
-import java.util.logging.Logger;
-
 import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
+
+import java.util.logging.Logger;
 
 public class ENUMCandidateHarvester extends DialCandidateHarvester implements Runnable {
 	
@@ -23,7 +23,7 @@ public class ENUMCandidateHarvester extends DialCandidateHarvester implements Ru
 		boolean runHarvest = true;
 		
 		boolean online = ENUMUtil.updateNotification(context);
-		
+
 		if(!online) {
 			logger.info("ENUM not online");
 			runHarvest = false;

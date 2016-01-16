@@ -1,19 +1,18 @@
 package org.sipdroid.sipua;
 
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.io.IOException;
-import java.net.BindException;
-import java.net.DatagramSocket;
-import java.util.logging.Logger;
-
 import org.ice4j.Transport;
 import org.ice4j.ice.Agent;
 import org.ice4j.ice.CandidatePair;
 import org.ice4j.ice.Component;
 import org.ice4j.ice.IceMediaStream;
 import org.ice4j.ice.IceProcessingState;
-import org.lumicall.android.R;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.io.IOException;
+import java.net.BindException;
+import java.net.DatagramSocket;
+import java.util.logging.Logger;
 
 public class MediaStream {
 	

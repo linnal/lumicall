@@ -1,12 +1,12 @@
 package org.lumicall.android.sip;
 
-import java.security.SecureRandom;
-import java.util.List;
+import android.app.Activity;
 
 import org.lumicall.android.db.LumicallDataSource;
 import org.lumicall.android.db.SIP5060ProvisioningRequest;
 
-import android.app.Activity;
+import java.security.SecureRandom;
+import java.util.List;
 
 public class RegistrationActivity extends Activity {
 	

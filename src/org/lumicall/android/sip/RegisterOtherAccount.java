@@ -19,73 +19,30 @@
  */
 package org.lumicall.android.sip;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.StringWriter;
-import java.net.URL;
-import java.security.Key;
-import java.security.KeyFactory;
-import java.security.SecureRandom;
-import java.security.Security;
-import java.security.spec.X509EncodedKeySpec;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-import java.util.Random;
-import java.util.regex.Pattern;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.lumicall.android.AppProperties;
-import org.lumicall.android.R;
-import org.lumicall.android.db.LumicallDataSource;
-import org.lumicall.android.db.SIP5060ProvisioningRequest;
-import org.lumicall.android.db.SIPIdentity;
-import org.lumicall.android.ganglia.GMonitorService;
-import org.lumicall.android.preferences.SIPIdentitiesSettings;
-import org.lumicall.android.reg.EnrolmentService;
-import org.sipdroid.sipua.SipdroidEngine;
-import org.sipdroid.sipua.ui.Receiver;
-import org.sipdroid.sipua.ui.Settings;
-import org.sipdroid.sipua.ui.Sipdroid;
-import org.xmlpull.v1.XmlSerializer;
-
-import android.accounts.Account;
-import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.preference.PreferenceManager;
-import android.telephony.TelephonyManager;
-import android.text.format.Time;
 import android.util.Log;
-import android.util.Xml;
-import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import org.lumicall.android.AppProperties;
+import org.lumicall.android.R;
+import org.lumicall.android.db.LumicallDataSource;
+import org.lumicall.android.db.SIPIdentity;
+import org.lumicall.android.preferences.SIPIdentitiesSettings;
+import org.sipdroid.sipua.ui.Receiver;
+import org.sipdroid.sipua.ui.Settings;
+import org.sipdroid.sipua.ui.Sipdroid;
 
 public class RegisterOtherAccount extends Activity {
 

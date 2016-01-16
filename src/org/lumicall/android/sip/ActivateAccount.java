@@ -1,12 +1,5 @@
 package org.lumicall.android.sip;
 
-import java.util.Date;
-
-import org.lumicall.android.R;
-import org.lumicall.android.db.LumicallDataSource;
-import org.lumicall.android.db.SIP5060ProvisioningRequest;
-import org.lumicall.android.reg.EnrolmentService;
-
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -20,6 +13,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import org.lumicall.android.R;
+import org.lumicall.android.db.LumicallDataSource;
+import org.lumicall.android.db.SIP5060ProvisioningRequest;
+import org.lumicall.android.reg.EnrolmentService;
 
 public class ActivateAccount extends Activity {
 	

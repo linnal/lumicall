@@ -39,7 +39,7 @@ public class MessageIndex extends Activity {
 	public static final int FIRST_MENU_ID = Menu.FIRST;
 	public static final int NEW_MESSAGE = FIRST_MENU_ID + 1;
 	public static final String MESSAGE_LIST_CHANGE = "org.lumicall.android.sip.MESSAGE_LIST_CHANGE";
-	
+
 	ListView smsList;
 	ArrayAdapter<UserMessage> adapter;
 	

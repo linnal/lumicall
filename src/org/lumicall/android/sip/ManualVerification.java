@@ -1,21 +1,5 @@
 package org.lumicall.android.sip;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.lumicall.android.R;
-import org.lumicall.android.Util;
-import org.lumicall.android.reg.EnrolmentService;
-import org.opentelecoms.util.csv.CSVReader;
-
-import com.google.i18n.phonenumbers.NumberParseException;
-import com.google.i18n.phonenumbers.PhoneNumberUtil;
-import com.google.i18n.phonenumbers.PhoneNumberUtil.PhoneNumberFormat;
-import com.google.i18n.phonenumbers.Phonenumber.PhoneNumber;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -27,7 +11,22 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
+
+import com.google.i18n.phonenumbers.NumberParseException;
+import com.google.i18n.phonenumbers.PhoneNumberUtil;
+import com.google.i18n.phonenumbers.PhoneNumberUtil.PhoneNumberFormat;
+import com.google.i18n.phonenumbers.Phonenumber.PhoneNumber;
+
+import org.lumicall.android.R;
+import org.lumicall.android.Util;
+import org.lumicall.android.reg.EnrolmentService;
+import org.opentelecoms.util.csv.CSVReader;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ManualVerification extends RegistrationActivity {
 	
@@ -38,7 +37,7 @@ public class ManualVerification extends RegistrationActivity {
 	private ArrayAdapter<CountryData> countries;
 	private Map<String,Integer> countriesByPosition;
 	private String line1Number;
-	
+
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

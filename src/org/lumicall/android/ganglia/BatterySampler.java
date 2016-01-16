@@ -1,11 +1,12 @@
 package org.lumicall.android.ganglia;
 
-import java.util.logging.Logger;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
+
+import java.util.logging.Logger;
+
 import info.ganglia.gmetric4j.GSampler;
 import info.ganglia.gmetric4j.Publisher;
 import info.ganglia.gmetric4j.gmetric.GMetricSlope;

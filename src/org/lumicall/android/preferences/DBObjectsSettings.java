@@ -1,17 +1,8 @@
 package org.lumicall.android.preferences;
 
-import java.util.List;
-
-import org.lumicall.android.R;
-import org.lumicall.android.db.DBObject;
-import org.lumicall.android.db.LumicallDataSource;
-import org.lumicall.android.db.SIPIdentity;
-
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
@@ -24,6 +15,12 @@ import android.view.View;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.Button;
 import android.widget.ListView;
+
+import org.lumicall.android.R;
+import org.lumicall.android.db.DBObject;
+import org.lumicall.android.db.LumicallDataSource;
+
+import java.util.List;
 
 public abstract class DBObjectsSettings<T extends DBObject> extends PreferenceActivity {
 	

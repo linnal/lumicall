@@ -21,26 +21,6 @@
 
 package org.sipdroid.media;
 
-import java.io.IOException;
-import java.math.BigInteger;
-import java.net.DatagramSocket;
-import java.net.SocketException;
-import java.util.logging.Logger;
-
-import org.sipdroid.net.RtpPacket;
-import org.sipdroid.net.RtpSocket;
-import org.sipdroid.net.SipdroidSocket;
-import org.lumicall.android.R;
-import zorg.SRTP;
-import zorg.ZRTP;
-import org.opentelecoms.util.CRC32C;
-import org.sipdroid.sipua.UserAgent;
-import org.sipdroid.sipua.ui.InCallScreen;
-import org.sipdroid.sipua.ui.Receiver;
-import org.sipdroid.sipua.ui.Sipdroid;
-import org.sipdroid.codecs.Codecs;
-
-
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences.Editor;
@@ -55,6 +35,25 @@ import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.view.KeyEvent;
 import android.widget.Toast;
+
+import org.lumicall.android.R;
+import org.opentelecoms.util.CRC32C;
+import org.sipdroid.codecs.Codecs;
+import org.sipdroid.net.RtpPacket;
+import org.sipdroid.net.RtpSocket;
+import org.sipdroid.net.SipdroidSocket;
+import org.sipdroid.sipua.UserAgent;
+import org.sipdroid.sipua.ui.InCallScreen;
+import org.sipdroid.sipua.ui.Receiver;
+import org.sipdroid.sipua.ui.Sipdroid;
+
+import java.io.IOException;
+import java.net.DatagramSocket;
+import java.net.SocketException;
+import java.util.logging.Logger;
+
+import zorg.SRTP;
+import zorg.ZRTP;
 
 /**
  * RtpStreamReceiver is a generic stream receiver. It receives packets from RTP
@@ -103,9 +102,7 @@ public class RtpStreamReceiver extends Thread {
 	
 	/**
 	 * Constructs a RtpStreamReceiver.
-	 * 
-	 * @param output_stream
-	 *            the stream sink
+	 *
 	 * @param socket
 	 *            the local receiver UDP datagram socket
 	 * @param srtp 

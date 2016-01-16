@@ -18,29 +18,24 @@
 
 package org.lumicall.android.sip;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.Vector;
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CyclicBarrier;
-
-import org.lumicall.android.AppProperties;
-import org.lumicall.android.db.ENUMSuffix;
-import org.lumicall.android.db.LumicallDataSource;
-
-import uk.nominet.DDDS.ENUM;
-import uk.nominet.DDDS.Rule;
 import android.content.ContentProvider;
 import android.content.ContentValues;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.database.SQLException;
 import android.net.Uri;
-import android.preference.PreferenceManager;
 import android.util.Log;
+
+import org.lumicall.android.db.ENUMSuffix;
+import org.lumicall.android.db.LumicallDataSource;
+
+import java.util.List;
+import java.util.Vector;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+import uk.nominet.DDDS.ENUM;
+import uk.nominet.DDDS.Rule;
 
 public class ENUMProviderForSIP extends ContentProvider {
 

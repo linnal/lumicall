@@ -1,15 +1,14 @@
 package org.lumicall.android.db;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Vector;
-
-import org.lumicall.android.AppProperties;
-import org.lumicall.android.preferences.PreferenceField;
-
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import org.lumicall.android.preferences.PreferenceField;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Vector;
 
 public class ENUMSuffix extends DBObject implements Comparable<ENUMSuffix> {
 	

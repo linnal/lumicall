@@ -25,7 +25,7 @@ public class LocationSampler extends GSampler {
 
 	public LocationSampler(Context context, int interval) {
 		super(0, interval, "lumicall");
-		
+
 		LocationListener locationListener = new MyLocationListener();
 		LocationManager lm = (LocationManager)context.getSystemService(Context.LOCATION_SERVICE);
 		lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 35000, 10, locationListener);

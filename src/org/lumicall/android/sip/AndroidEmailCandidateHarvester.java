@@ -1,9 +1,5 @@
 package org.lumicall.android.sip;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Vector;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
@@ -11,8 +7,12 @@ import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Email;
 import android.util.Log;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Vector;
+
 public class AndroidEmailCandidateHarvester extends EmailCandidateHarvester {
-	
+
 	Context context;
 	
 	public AndroidEmailCandidateHarvester(Context context) {

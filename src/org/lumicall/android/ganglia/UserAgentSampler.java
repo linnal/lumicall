@@ -1,6 +1,6 @@
 package org.lumicall.android.ganglia;
 
-import java.util.logging.Logger;
+import android.content.Context;
 
 import org.sipdroid.media.RtpStreamReceiver;
 import org.sipdroid.media.RtpStreamSender;
@@ -8,7 +8,7 @@ import org.sipdroid.sipua.UserAgent;
 import org.sipdroid.sipua.ui.Receiver;
 import org.sipdroid.sipua.ui.Settings;
 
-import android.content.Context;
+import java.util.logging.Logger;
 
 import info.ganglia.gmetric4j.GSampler;
 import info.ganglia.gmetric4j.Publisher;

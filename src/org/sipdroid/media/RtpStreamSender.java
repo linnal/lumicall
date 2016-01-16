@@ -21,29 +21,6 @@
 
 package org.sipdroid.media;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.math.BigInteger;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Random;
-import java.util.logging.Logger;
-
-import zorg.SRTP;
-import zorg.ZRTP;
-import org.opentelecoms.util.CRC32C;
-import org.sipdroid.net.RtpPacket;
-import org.sipdroid.net.RtpSocket;
-import org.sipdroid.sipua.UserAgent;
-import org.sipdroid.sipua.ui.Receiver;
-import org.sipdroid.sipua.ui.Settings;
-import org.sipdroid.sipua.ui.Sipdroid;
-import org.sipdroid.codecs.Codecs;
-import org.sipdroid.codecs.G711;
-
-
 import android.content.Context;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -53,6 +30,28 @@ import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
+
+import org.opentelecoms.util.CRC32C;
+import org.sipdroid.codecs.Codecs;
+import org.sipdroid.codecs.G711;
+import org.sipdroid.net.RtpPacket;
+import org.sipdroid.net.RtpSocket;
+import org.sipdroid.sipua.UserAgent;
+import org.sipdroid.sipua.ui.Receiver;
+import org.sipdroid.sipua.ui.Settings;
+import org.sipdroid.sipua.ui.Sipdroid;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Random;
+import java.util.logging.Logger;
+
+import zorg.SRTP;
+import zorg.ZRTP;
 
 /**
  * RtpStreamSender is a generic stream sender. It takes an InputStream and sends
@@ -134,9 +133,7 @@ public class RtpStreamSender extends Thread {
 	
 	/**
 	 * Constructs a RtpStreamSender.
-	 * 
-	 * @param input_stream
-	 *            the stream to be sent
+	 *
 	 * @param do_sync
 	 *            whether time synchronization must be performed by the
 	 *            RtpStreamSender, or it is performed by the InputStream (e.g.

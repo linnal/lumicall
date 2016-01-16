@@ -1,20 +1,18 @@
 package org.lumicall.android.reg;
 
-import java.io.IOException;
-import java.io.StringWriter;
-import java.util.logging.Logger;
-
-import org.lumicall.android.AppProperties;
-import org.lumicall.android.sip.RegistrationFailedException;
-import org.lumicall.android.sip.RegistrationUtil;
-import org.xmlpull.v1.XmlSerializer;
-
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.telephony.SmsManager;
 import android.util.Xml;
+
+import org.lumicall.android.AppProperties;
+import org.lumicall.android.sip.RegistrationUtil;
+import org.xmlpull.v1.XmlSerializer;
+
+import java.io.StringWriter;
+import java.util.logging.Logger;
 
 
 public class SMSProgressReceiver extends BroadcastReceiver {

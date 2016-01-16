@@ -1,10 +1,11 @@
 package org.lumicall.android.ganglia;
 
-import java.util.logging.Logger;
-
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+
+import java.util.logging.Logger;
+
 import info.ganglia.gmetric4j.GSampler;
 import info.ganglia.gmetric4j.Publisher;
 import info.ganglia.gmetric4j.gmetric.GMetricSlope;
@@ -20,7 +21,7 @@ public class WifiSampler extends GSampler {
 		super(0, interval, "lumicall");
 		this.context = context;
 	}
-	
+
 	protected void publishWifi(Publisher p) throws Exception {
 		WifiManager wm = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
 		WifiInfo wi = wm.getConnectionInfo();

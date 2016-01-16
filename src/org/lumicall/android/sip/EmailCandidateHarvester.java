@@ -1,8 +1,6 @@
 package org.lumicall.android.sip;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import android.util.Log;
 
 import org.xbill.DNS.ExtendedResolver;
 import org.xbill.DNS.Lookup;
@@ -12,7 +10,9 @@ import org.xbill.DNS.Resolver;
 import org.xbill.DNS.SRVRecord;
 import org.xbill.DNS.Type;
 
-import android.util.Log;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 public abstract class EmailCandidateHarvester extends ThreadedDialCandidateHarvester {
 	

@@ -1,11 +1,12 @@
 package org.lumicall.android.ganglia;
 
-import java.util.logging.Logger;
-
 import android.content.Context;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
+
+import java.util.logging.Logger;
+
 import info.ganglia.gmetric4j.GSampler;
 import info.ganglia.gmetric4j.Publisher;
 import info.ganglia.gmetric4j.gmetric.GMetricSlope;
@@ -26,7 +27,7 @@ public class TelephonySampler extends GSampler {
 		tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 		tm.listen(new GSMListener(), PhoneStateListener.LISTEN_SIGNAL_STRENGTHS);
 	}
-	
+
 	class GSMListener extends PhoneStateListener {
 		public void onSignalStrengthsChanged(SignalStrength ss) {
 			gsmSS = ss.getGsmSignalStrength();

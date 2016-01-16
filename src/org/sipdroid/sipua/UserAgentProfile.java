@@ -21,11 +21,10 @@
 
 package org.sipdroid.sipua;
 
-import org.lumicall.android.R;
 import org.lumicall.android.db.SecurityMode;
-import org.zoolu.sip.address.*;
-import org.zoolu.sip.provider.SipStack;
+import org.zoolu.sip.address.NameAddress;
 import org.zoolu.sip.provider.SipProvider;
+import org.zoolu.sip.provider.SipStack;
 import org.zoolu.tools.Configure;
 import org.zoolu.tools.Parser;
 

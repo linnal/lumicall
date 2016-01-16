@@ -21,12 +21,11 @@
 
 package org.sipdroid.net;
 
+import java.io.IOException;
+import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.net.DatagramPacket;
-import java.net.SocketTimeoutException;
 import java.util.logging.Logger;
-import java.io.IOException;
 
 
 

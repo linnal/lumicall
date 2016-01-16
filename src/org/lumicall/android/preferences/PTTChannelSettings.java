@@ -1,37 +1,18 @@
 package org.lumicall.android.preferences;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.math.BigDecimal;
-import java.util.List;
-import java.util.logging.Logger;
+import android.preference.Preference;
 
 import org.lumicall.android.R;
 import org.lumicall.android.db.LumicallDataSource;
 import org.lumicall.android.db.PTTChannel;
-import org.lumicall.android.db.SIPIdentity;
-import org.sipdroid.sipua.ui.Receiver;
 import org.zoolu.sdp.SRTPKeySpec;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.logging.Logger;
 
 import de.rtner.security.auth.spi.PBKDF2Engine;
 import de.rtner.security.auth.spi.PBKDF2Parameters;
-
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.preference.CheckBoxPreference;
-import android.preference.EditTextPreference;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceScreen;
-import android.text.InputType;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.widget.EditText;
-import android.widget.TextView;
 
 public class PTTChannelSettings extends DBObjectSettings<PTTChannel> {
 	

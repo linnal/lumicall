@@ -23,21 +23,24 @@ package org.sipdroid.sipua;
 
 
 import org.sipdroid.sipua.ui.MessageSendingRequest;
-import org.zoolu.sip.address.*;
+import org.zoolu.sip.address.NameAddress;
 import org.zoolu.sip.authentication.DigestAuthentication;
-import org.zoolu.sip.provider.*;
-import org.zoolu.sip.transaction.*;
 import org.zoolu.sip.header.AuthorizationHeader;
 import org.zoolu.sip.header.ProxyAuthenticateHeader;
 import org.zoolu.sip.header.ProxyAuthorizationHeader;
 import org.zoolu.sip.header.StatusLine;
 import org.zoolu.sip.header.ViaHeader;
 import org.zoolu.sip.header.WwwAuthenticateHeader;
-import org.zoolu.sip.message.*;
-import org.zoolu.tools.Log;
-import org.zoolu.tools.LogLevel;
+import org.zoolu.sip.message.Message;
+import org.zoolu.sip.message.MessageFactory;
+import org.zoolu.sip.message.SipMethods;
+import org.zoolu.sip.provider.MethodIdentifier;
+import org.zoolu.sip.provider.SipProvider;
+import org.zoolu.sip.provider.SipProviderListener;
+import org.zoolu.sip.transaction.TransactionClient;
+import org.zoolu.sip.transaction.TransactionClientListener;
+import org.zoolu.sip.transaction.TransactionServer;
 
-import java.io.*;
 import java.util.logging.Logger;
 
 

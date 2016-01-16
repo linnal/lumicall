@@ -1,19 +1,20 @@
 package org.lumicall.android.ganglia;
 
-import java.util.UUID;
-import java.util.logging.Logger;
-
-import org.sipdroid.sipua.ui.Settings;
-
-import info.ganglia.gmetric4j.CoreSampler;
-import info.ganglia.gmetric4j.GMonitor;
-import info.ganglia.gmetric4j.gmetric.GMetric;
-import info.ganglia.gmetric4j.gmetric.GMetric.UDPAddressingMode;
 import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
+
+import org.sipdroid.sipua.ui.Settings;
+
+import java.util.UUID;
+import java.util.logging.Logger;
+
+import info.ganglia.gmetric4j.CoreSampler;
+import info.ganglia.gmetric4j.GMonitor;
+import info.ganglia.gmetric4j.gmetric.GMetric;
+import info.ganglia.gmetric4j.gmetric.GMetric.UDPAddressingMode;
 
 public class GMonitorService extends Service {
 	
@@ -27,7 +28,7 @@ public class GMonitorService extends Service {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Override
 	public void onCreate() {
 		super.onCreate();

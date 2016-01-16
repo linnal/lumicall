@@ -1,10 +1,24 @@
 package org.lumicall.android.sip;
 
+import android.content.Context;
+import android.content.res.Resources;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.lumicall.android.AppProperties;
+import org.lumicall.android.R;
+import org.lumicall.android.db.SIP5060ProvisioningRequest;
+import org.opentelecoms.util.Base64;
+import org.xmlpull.v1.XmlSerializer;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.StringWriter;
 import java.security.InvalidKeyException;
 import java.security.Key;
 import java.security.KeyFactory;
@@ -20,23 +34,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.opentelecoms.util.Base64;
-import org.lumicall.android.AppProperties;
-import org.lumicall.android.R;
-import org.lumicall.android.db.SIP5060ProvisioningRequest;
-import org.xmlpull.v1.XmlSerializer;
-
-import android.content.Context;
-import android.content.res.Resources;
-import android.util.Log;
-import android.util.Xml;
 
 public class RegistrationUtil {
 

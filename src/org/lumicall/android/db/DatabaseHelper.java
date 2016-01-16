@@ -1,13 +1,13 @@
 package org.lumicall.android.db;
 
-import java.util.logging.Logger;
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.logging.Logger;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
-	
+
 	private Logger logger = Logger.getLogger(getClass().getName());
 	
 	private final static String DB_NAME = "lumicall";

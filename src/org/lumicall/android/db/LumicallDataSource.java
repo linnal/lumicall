@@ -1,11 +1,10 @@
 package org.lumicall.android.db;
 
-import java.util.List;
-import java.util.Vector;
-
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+
+import java.util.List;
 
 public class LumicallDataSource {
 

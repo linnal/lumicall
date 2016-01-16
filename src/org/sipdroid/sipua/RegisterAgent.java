@@ -21,13 +21,7 @@
 
 package org.sipdroid.sipua;
 
-import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import org.lumicall.android.R;
 import org.sipdroid.sipua.ui.Receiver;
-import org.sipdroid.sipua.ui.Settings;
 import org.sipdroid.sipua.ui.Sipdroid;
 import org.zoolu.sip.address.NameAddress;
 import org.zoolu.sip.authentication.DigestAuthentication;
@@ -51,11 +45,12 @@ import org.zoolu.sip.provider.SipStack;
 import org.zoolu.sip.provider.TransactionIdentifier;
 import org.zoolu.sip.transaction.TransactionClient;
 import org.zoolu.sip.transaction.TransactionClientListener;
-import org.zoolu.tools.Log;
 import org.zoolu.tools.LogLevel;
 import org.zoolu.tools.Parser;
 
-import android.preference.PreferenceManager;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Register User Agent. It registers (one time or periodically) a contact

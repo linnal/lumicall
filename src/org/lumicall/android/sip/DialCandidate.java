@@ -1,6 +1,10 @@
 package org.lumicall.android.sip;
 
-import java.util.List;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import org.lumicall.android.R;
 import org.lumicall.android.db.LumicallDataSource;
@@ -8,15 +12,6 @@ import org.lumicall.android.db.SIPIdentity;
 import org.sipdroid.sipua.ui.PSTN;
 import org.sipdroid.sipua.ui.Receiver;
 import org.sipdroid.sipua.ui.Settings;
-
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.net.Uri;
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.widget.Toast;
 
 public class DialCandidate implements Parcelable {
 	String scheme;

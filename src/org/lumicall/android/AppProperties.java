@@ -1,15 +1,12 @@
 package org.lumicall.android;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
-import java.util.Properties;
-import java.util.StringTokenizer;
-import java.util.Vector;
-
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 public class AppProperties extends Properties {
 	

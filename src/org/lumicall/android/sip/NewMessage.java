@@ -1,15 +1,5 @@
 package org.lumicall.android.sip;
 
-import java.util.Date;
-
-import org.lumicall.android.R;
-import org.lumicall.android.db.LumicallDataSource;
-import org.lumicall.android.db.SIPIdentity;
-import org.lumicall.android.db.UserMessage;
-import org.sipdroid.sipua.ui.MessageSendingRequest;
-import org.sipdroid.sipua.ui.Receiver;
-import org.sipdroid.sipua.ui.Settings;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +11,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.lumicall.android.R;
+import org.lumicall.android.db.LumicallDataSource;
+import org.lumicall.android.db.SIPIdentity;
+import org.lumicall.android.db.UserMessage;
+import org.sipdroid.sipua.ui.MessageSendingRequest;
+import org.sipdroid.sipua.ui.Receiver;
+import org.sipdroid.sipua.ui.Settings;
+
+import java.util.Date;
+
 public class NewMessage extends Activity {
 	
 	private static final String TAG = "NewMessage";
@@ -30,7 +30,7 @@ public class NewMessage extends Activity {
 	static final String EMPTY_RECIPIENT_VALUE = "sip:";
 
 	private static final String DEFAULT_CONTENT_TYPE = "application/text";
-	
+
 	EditText recipient;
 	EditText body;
 	Button sendButton;

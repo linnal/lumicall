@@ -19,6 +19,10 @@
  */
 package org.sipdroid.media;
 
+import org.sipdroid.codecs.Codecs;
+import org.sipdroid.sipua.ui.Sipdroid;
+import org.zoolu.tools.LogLevel;
+
 import java.net.DatagramSocket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,20 +31,6 @@ import zorg.AuthenticationMode;
 import zorg.CipherType;
 import zorg.SRTP;
 import zorg.ZRTP;
-import zorg.platform.ZrtpListener;
-
-import org.sipdroid.codecs.Codecs;
-import org.sipdroid.net.SipdroidSocket;
-import org.sipdroid.sipua.UserAgent;
-import org.sipdroid.sipua.ui.Receiver;
-import org.sipdroid.sipua.ui.Sipdroid;
-import org.zoolu.sip.provider.SipStack;
-import org.zoolu.tools.Log;
-import org.zoolu.tools.LogLevel;
-
-
-import android.net.NetworkInfo.State;
-import android.preference.PreferenceManager;
 
 /** Audio launcher based on javax.sound  */
 public class JAudioLauncher implements MediaLauncher

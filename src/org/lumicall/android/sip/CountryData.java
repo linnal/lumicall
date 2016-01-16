@@ -5,7 +5,7 @@ public class CountryData {
 	private String name;
 	private String isoCountryCode;
 	private String ituCountryCode;
-	
+
 	public CountryData(String _name, String _isoCountryCode, String _ituCountryCode) {
 		setName(_name);
 		setIsoCountryCode(_isoCountryCode);

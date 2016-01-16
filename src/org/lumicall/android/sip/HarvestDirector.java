@@ -1,16 +1,16 @@
 package org.lumicall.android.sip;
 
+import android.content.Context;
+
 import java.util.Collection;
 import java.util.concurrent.ConcurrentLinkedQueue;
-
-import android.content.Context;
 
 public class HarvestDirector extends DialCandidateHarvester implements DialCandidateListener {
 	
 	Collection<DialCandidateHarvester> harvesters;
 
 	public HarvestDirector(Context context) {
-		
+
 		harvesters = new ConcurrentLinkedQueue<DialCandidateHarvester>();
 		
 		harvesters.add(new ENUMCandidateHarvester(context));
